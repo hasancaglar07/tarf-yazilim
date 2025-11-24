@@ -386,7 +386,7 @@ export default function Home() {
                       <Badge variant="outline" className="border-primary/30 bg-background/80 text-primary">
                         Entegrasyon Platformu
                       </Badge>
-                      <Badge variant="secondary">{integrationProduct.title}</Badge>
+                      <Badge variant="muted">{integrationProduct.title}</Badge>
                       <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
                         {integrationProduct.result}
                       </span>
