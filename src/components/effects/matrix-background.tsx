@@ -19,10 +19,11 @@ export function MatrixBackground({
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const fontSize = 15;
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const fontSize = isMobile ? 18 : 15;
     const fadeAlpha = 0.05;
-    const speedMin = 0.05;
-    const speedMax = 0.14;
+    const speedMin = isMobile ? 0.04 : 0.05;
+    const speedMax = isMobile ? 0.12 : 0.14;
     const chars = "01<>\\/{}[]ABCDEFghijklmnopqrstuvwxyz".split("");
 
     const setSize = () => {
