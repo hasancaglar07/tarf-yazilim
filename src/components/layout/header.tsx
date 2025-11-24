@@ -4,13 +4,13 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, type Transition } from "framer-motion";
 
 import { navItems } from "@/content/data";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-const spring = { type: "spring", stiffness: 300, damping: 24 };
+const spring: Transition = { type: "spring", stiffness: 300, damping: 24 };
 
 export function Header() {
   const pathname = usePathname();
